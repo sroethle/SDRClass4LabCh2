@@ -3,7 +3,7 @@
     Created on : Jan 30, 2013, 5:41:27 PM
     Author     : sroethle
 --%>
-<%@page import="java.util.*"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,10 +20,11 @@
             <input type="submit" value="Submit">
         </form> 
         <%
-            Object attr = request.getAttribute("areaRectangle");
+            Object attr = null;
+            String area = String.valueOf(attr);
 
-            if (attr != null || attr != "") {
-                out.println("<h2> The Area of the Rectangle is: " + attr.toString() + " </h2>");
+            if (area!=null) {
+                out.println("<h2> The Area of the Rectangle is: " + area.toString() + " </h2>");
             }       
         %>
 
