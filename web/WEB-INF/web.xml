@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>AreaOfCircleController</servlet-name>
+        <servlet-class>class4.servlet.AreaOfCircleController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AreaOfRectangleController</servlet-name>
+        <servlet-class>class4.servlet.AreaOfRectangleController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ThirdSideOfTriangleController</servlet-name>
+        <servlet-class>class4.servlet.ThirdSideOfTriangleController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AreaOfRectangleController</servlet-name>
+        <url-pattern>/AreaOfRectangleController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AreaOfCircleController</servlet-name>
+        <url-pattern>/AreaOfCircleController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThirdSideOfTriangleController</servlet-name>
+        <url-pattern>/ThirdSideOfTriangleController</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
