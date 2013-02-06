@@ -4,6 +4,7 @@
  */
 package class4.servlet;
 
+import class4.model.Circle;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author sroethle
  */
 public class AreaOfCircleController extends HttpServlet {
-private static final String destination = "/AreaOfCircleView.jsp";
+private static final String destination = "/index.jsp";
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -36,12 +37,11 @@ private static final String destination = "/AreaOfCircleView.jsp";
         // We can retrieve these from named form elements or as QueryString parameters (in URL)
         String strRadius = request.getParameter("radius");
         double dblRadius = Double.valueOf(strRadius);
-        final double PI = 3.14159265359;
-        
-        double area = PI*dblRadius*dblRadius;
+        Circle circle = new Circle();
+        circle.setRadius(dblRadius);
 
         // But we can store them in the request object as "attributes"
-        request.setAttribute("areaCircle", area);
+        request.setAttribute("areaCircle", circle.calculateArea());
 
         // Now can forward the request and response objects to the destination page,
         // so long as it's a JSP or Servlet

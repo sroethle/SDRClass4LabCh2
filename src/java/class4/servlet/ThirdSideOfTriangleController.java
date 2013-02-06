@@ -4,6 +4,7 @@
  */
 package class4.servlet;
 
+import class4.model.Triangle;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author sroethle
  */
 public class ThirdSideOfTriangleController extends HttpServlet {
-private static final String destination = "/ThirdSideOfTriangleView.jsp";
+private static final String destination = "/index.jsp";
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -36,13 +37,13 @@ private static final String destination = "/ThirdSideOfTriangleView.jsp";
         // We can retrieve these from named form elements or as QueryString parameters (in URL)
         String strSide1 = request.getParameter("side1");
         String strSide2 = request.getParameter("side2");
-        double dblSide1 = Double.parseDouble(strSide1);
-        double dblSide2 = Double.parseDouble(strSide2);
         
-        double dblSide3 = Math.sqrt(dblSide1*dblSide1 + dblSide2*dblSide2);       
-
+        Triangle triangle = new Triangle();
+        triangle.setSide1(Double.parseDouble(strSide1));
+        triangle.setSide2(Double.parseDouble(strSide2));
+        
         // But we can store them in the request object as "attributes"
-        request.setAttribute("side3", dblSide3);
+        request.setAttribute("side3", triangle.calculateSide3());
 
         // Now can forward the request and response objects to the destination page,
         // so long as it's a JSP or Servlet

@@ -4,6 +4,7 @@
  */
 package class4.servlet;
 
+import class4.model.Rectangle;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -36,13 +37,14 @@ private static final String destination = "/index.jsp";
         // We can retrieve these from named form elements or as QueryString parameters (in URL)
         String strLength = request.getParameter("length");
         String strWidth = request.getParameter("width");
-        double dblLength = Double.parseDouble(strLength);
-        double dblWidth = Double.parseDouble(strWidth);
-        double area = dblLength*dblWidth;
+        
+        Rectangle rectangle = new Rectangle();
+        rectangle.setLength(Double.parseDouble(strLength));
+        rectangle.setWidth(Double.parseDouble(strWidth));
         
 
         // But we can store them in the request object as "attributes"
-        request.setAttribute("areaRectangle", area);
+        request.setAttribute("areaRectangle", rectangle.calculateArea());
 
         // Now can forward the request and response objects to the destination page,
         // so long as it's a JSP or Servlet
