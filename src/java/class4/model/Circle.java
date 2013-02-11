@@ -1,12 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package class4.model;
 
 /**
- *
- * @author Scotty
+ * Represents the calculations that can be performed on a circle.
+ * @author Scott Roethle
  */
 public class Circle {
     
@@ -23,6 +19,7 @@ public class Circle {
     }
 
     public void setRadius(double radius) {
+        
         this.radius = radius;
     }
     

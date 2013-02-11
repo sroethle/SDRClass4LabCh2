@@ -1,8 +1,8 @@
 package class4.model;
 
 /**
- *
- * @author Scotty
+ * Represents the calculations that can be performed on a triangle.
+ * @author Scott Roethle
  */
 public class Triangle {
     

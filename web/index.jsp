@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index
+    Document   : index page
     Created on : Jan 30, 2013, 5:41:27 PM
     Author     : sroethle
 --%>
@@ -22,9 +22,9 @@
         <%
             Object rectangleArea = request.getAttribute("areaRectangle");
 
-            if (rectangleArea!=null) {
+            if (rectangleArea != null) {
                 out.println("<h2> The Area of the Rectangle is: " + rectangleArea.toString() + " </h2>");
-            }       
+            }
         %>
 
         <h1>Calculate the Area of a Circle!</h1>
@@ -35,7 +35,7 @@
         </form> 
         <%
             Object circleArea = request.getAttribute("areaCircle");
-                        
+
             if (circleArea != null) {
                 out.println("<h2> The Area of the Circle is: " + circleArea.toString() + " </h2>");
             }
@@ -49,12 +49,12 @@
         </form> 
         <%
             Object thirdSide = request.getAttribute("side3");
-                        
+
             if (thirdSide != null) {
                 out.println("<h2> The third side of the triangle is: " + thirdSide.toString() + " </h2>");
             }
         %>
-        
+
         <script type="text/javascript">
             function validateRectangle()
             {

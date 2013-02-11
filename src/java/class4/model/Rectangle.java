@@ -1,20 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package class4.model;
 
 /**
- *
- * @author sroethle
+ * Represents the calculations that can be performed on a Rectangle.
+ * 
+ * @author Scott Roethle
  */
 public class Rectangle {
     
     private double length;
     private double width;
-    
-    
-    
+
     public double calculateArea(){
         
         return length*width;

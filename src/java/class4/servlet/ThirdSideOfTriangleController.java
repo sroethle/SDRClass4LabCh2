@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package class4.servlet;
 
 import class4.model.Triangle;
@@ -14,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ * Controller for calculating the length of the third side of a triangle.
  * @author sroethle
  */
 public class ThirdSideOfTriangleController extends HttpServlet {
