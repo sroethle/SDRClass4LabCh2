@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author sroethle
  */
 public class AreaOfCircleController extends HttpServlet {
-private static final String destination = "/index.jsp";
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -28,6 +28,7 @@ private static final String destination = "/index.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String destination = "/index.jsp";
         
 
         // We can retrieve these from named form elements or as QueryString parameters (in URL)

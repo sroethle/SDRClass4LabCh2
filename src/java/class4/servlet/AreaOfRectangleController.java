@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author sroethle
  */
 public class AreaOfRectangleController extends HttpServlet {
-private static final String destination = "/index.jsp";
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -29,6 +29,7 @@ private static final String destination = "/index.jsp";
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String destination = "/index.jsp";
 
         // We can retrieve these from named form elements or as QueryString parameters (in URL)
         String strLength = request.getParameter("length");

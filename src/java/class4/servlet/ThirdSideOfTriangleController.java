@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author sroethle
  */
 public class ThirdSideOfTriangleController extends HttpServlet {
-private static final String destination = "/index.jsp";
+
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -29,6 +29,7 @@ private static final String destination = "/index.jsp";
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        String destination = "/index.jsp";
 
         // We can retrieve these from named form elements or as QueryString parameters (in URL)
         String strSide1 = request.getParameter("side1");
@@ -39,7 +40,7 @@ private static final String destination = "/index.jsp";
         triangle.setSide2(Double.parseDouble(strSide2));
         
         // But we can store them in the request object as "attributes"
-        request.setAttribute("side3", triangle.calculateSide3());
+        request.setAttribute("side3", triangle.calculateHypotenuse());
 
         // Now can forward the request and response objects to the destination page,
         // so long as it's a JSP or Servlet
